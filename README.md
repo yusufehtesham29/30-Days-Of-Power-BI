@@ -15,7 +15,8 @@ A 30-day end-to-end business intelligence portfolio repository translating real-
 | **05** | [Blinkit Inventory Inflow & Shrinkage](./Day5%20-%20Blinkit-Inventory-Damage-Analytics/) | Quick Commerce | `SUMX` + `RELATED()`, Multi-Dimension Schema, Shrinkage Loss ₹, Vendor QA | ✅ Completed |
 | **06** | [Blinkit Last-Mile Logistics & SLA Fulfilment](./Day6%20-%20Blinkit-Delivery-SLA-Analytics/) | Quick Commerce | `CALCULATE` Filter Modifiers, Distance Binning, Hourly SLA Pacing, OTD % | ✅ Completed |
 | **07** | [Blinkit Customer Feedback & CSAT](./Day7%20-%20Blinkit-Customer-Feedback-Sentiment-Analytics/) | Quick Commerce | Image URL Data Categorization, CSAT %, Net Sentiment Score | ✅ Completed |
-| **08–30** | *Upcoming Industry Dashboards* | *HR, Finance, Healthcare, SCM* | Advanced DAX, Optimization, Visual Storytelling | ⏳ Planned |
+| **08** | [Blinkit Marketing Attribution & ROAS](./Day8%20-%20Blinkit-Marketing-Attribution-ROAS-Analytics/) | Quick Commerce | Dynamic Portfolio ROAS, CAC / CPA Metrics, Multi-Channel Funnel Modeling | ✅ Completed |
+| **09–30** | *Upcoming Industry Dashboards* | *HR, Finance, Healthcare, SCM* | Advanced DAX, Optimization, Visual Storytelling | ⏳ Planned |
 
 ---
 
