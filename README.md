@@ -17,7 +17,8 @@ A 30-day end-to-end business intelligence portfolio repository translating real-
 | **07** | [Blinkit Customer Feedback & CSAT](./Day7%20-%20Blinkit-Customer-Feedback-Sentiment-Analytics/) | Quick Commerce | Image URL Data Categorization, CSAT %, Net Sentiment Score | ✅ Completed |
 | **08** | [Blinkit Marketing Attribution & ROAS](./Day8%20-%20Blinkit-Marketing-Attribution-ROAS-Analytics/) | Quick Commerce | Dynamic Portfolio ROAS, CAC / CPA Metrics, Multi-Channel Funnel Modeling | ✅ Completed |
 | **09** | [Olist Brazilian E-Commerce Analytics](./Day9%20-%20Olist-Brazilian-ECommerce-Analytics/) | E-Commerce / Marketplace | Multi-Table Star Schema, Delivery SLA Variance, AOV, State Logistics Matrix | ✅ Completed |
-| **10–30** | *Upcoming Industry Dashboards* | *HR, Finance, Healthcare, SCM* | Advanced DAX, Optimization, Visual Storytelling | ⏳ Planned |
+| **10** | [Global Superstore Returns & Pareto Root Cause](./Day10%20-%20Global-Superstore-Returns-Pareto-Analytics/) | Retail / E-Commerce | Pareto 80/20 (`SUMX` + `ALLSELECTED`), Return Rate %, Net Margin Impact, Lost Profit | ✅ Completed |
+| **11–30** | *Upcoming Industry Dashboards* | *HR, Finance, Healthcare, SCM* | Advanced DAX, Optimization, Visual Storytelling | ⏳ Planned |
 
 ---
 
