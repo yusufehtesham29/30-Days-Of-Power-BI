@@ -19,7 +19,8 @@ A 30-day end-to-end business intelligence portfolio repository translating real-
 | **09** | [Olist Brazilian E-Commerce Analytics](./Day9%20-%20Olist-Brazilian-ECommerce-Analytics/) | E-Commerce / Marketplace | Multi-Table Star Schema, Delivery SLA Variance, AOV, State Logistics Matrix | ✅ Completed |
 | **10** | [Global Superstore Returns & Pareto Root Cause](./Day10%20-%20Global-Superstore-Returns-Pareto-Analytics/) | Retail / E-Commerce | Pareto 80/20 (`SUMX` + `ALLSELECTED`), Return Rate %, Net Margin Impact, Lost Profit | ✅ Completed |
 | **11** | [Bank Customer Churn & Risk Scoring](./Day11%20-%20Bank-Customer-Churn-Risk-Analytics/) | Fintech & Banking | Churn Rate %, Balance at Risk ($/%), Age & Credit Tiering, Cross-Sell Curve | ✅ Completed |
-| **12–30** | *Upcoming Industry Dashboards* | *HR, Finance, Healthcare, SCM* | Advanced DAX, Optimization, Visual Storytelling | ⏳ Planned |
+| **12** | [SaaS & Subscription MRR Retention Command Center](./Day12%20-%20SaaS-Subscription-MRR-Retention-Analytics/) | SaaS & Recurring Revenue | MRR, Churned MRR, Logo vs. Revenue Churn %, ARPU, Tenure Cohort Analysis | ✅ Completed |
+| **13–30** | *Upcoming Industry Dashboards* | *HR, Finance, Healthcare, SCM* | Advanced DAX, Optimization, Visual Storytelling | ⏳ Planned |
 
 ---
 
