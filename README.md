@@ -20,7 +20,8 @@ A 30-day end-to-end business intelligence portfolio repository translating real-
 | **10** | [Global Superstore Returns & Pareto Root Cause](./Day10%20-%20Global-Superstore-Returns-Pareto-Analytics/) | Retail / E-Commerce | Pareto 80/20 (`SUMX` + `ALLSELECTED`), Return Rate %, Net Margin Impact, Lost Profit | ✅ Completed |
 | **11** | [Bank Customer Churn & Risk Scoring](./Day11%20-%20Bank-Customer-Churn-Risk-Analytics/) | Fintech & Banking | Churn Rate %, Balance at Risk ($/%), Age & Credit Tiering, Cross-Sell Curve | ✅ Completed |
 | **12** | [SaaS & Subscription MRR Retention Command Center](./Day12%20-%20SaaS-Subscription-MRR-Retention-Analytics/) | SaaS & Recurring Revenue | MRR, Churned MRR, Logo vs. Revenue Churn %, ARPU, Tenure Cohort Analysis | ✅ Completed |
-| **13–30** | *Upcoming Industry Dashboards* | *HR, Finance, Healthcare, SCM* | Advanced DAX, Optimization, Visual Storytelling | ⏳ Planned |
+| **13** | [FinTech Credit Risk & Loan Portfolio Analytics](./Day13%20-%20FinTech-Credit-Risk-Loan-Portfolio-Analytics/) | FinTech & Banking | Total Funded, Recoveries, Good vs Bad Loan %, Net Capital Loss, Grade & Term Risk | ✅ Completed |
+| **14–30** | *Upcoming Industry Dashboards* | *HR, Finance, Healthcare, SCM* | Advanced DAX, Optimization, Visual Storytelling | ⏳ Planned |
 
 ---
 
