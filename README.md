@@ -22,7 +22,8 @@ A 30-day end-to-end business intelligence portfolio repository translating real-
 | **12** | [SaaS & Subscription MRR Retention Command Center](./Day12%20-%20SaaS-Subscription-MRR-Retention-Analytics/) | SaaS & Recurring Revenue | MRR, Churned MRR, Logo vs. Revenue Churn %, ARPU, Tenure Cohort Analysis | ✅ Completed |
 | **13** | [FinTech Credit Risk & Loan Portfolio Analytics](./Day13%20-%20FinTech-Credit-Risk-Loan-Portfolio-Analytics/) | FinTech & Banking | Total Funded, Recoveries, Good vs Bad Loan %, Net Capital Loss, Grade & Term Risk | ✅ Completed |
 | **14** | [Commercial Treasury & Liquidity Flow Analytics](./Day14%20-%20Commercial-Treasury-Corporate-Liquidity-Flows/) | FinTech & Banking | Gross Turnover, Net Liquidity Position, Inflow Coverage %, Payment Rails, Account Concentration | ✅ Completed |
-| **15–30** | *Upcoming Industry Dashboards* | *HR, Finance, Healthcare, SCM* | Advanced DAX, Optimization, Visual Storytelling | ⏳ Planned |
+| **15** | [Global Supply Chain & Freight Logistics Analytics](./Day15%20-%20Global-Supply-Chain-Logistics-OTIF-Performance/) | Supply Chain & Operations | Distinct Orders, Line Items, Late Delivery %, On-Time Rate %, Transit Days, Carrier Mode Delay | ✅ Completed |
+| **16–30** | *Upcoming Industry Dashboards* | *HR, Finance, Healthcare, SCM* | Advanced DAX, Optimization, Visual Storytelling | ⏳ Planned |
 
 ---
 
