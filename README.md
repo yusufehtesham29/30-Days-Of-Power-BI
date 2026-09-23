@@ -25,7 +25,8 @@ A 30-day end-to-end business intelligence portfolio repository translating real-
 | **15** | [Global Supply Chain & Freight Logistics Analytics](./Day15%20-%20Global-Supply-Chain-Logistics-OTIF-Performance/) | Supply Chain & Operations | Distinct Orders, Line Items, Late Delivery %, On-Time Rate %, Transit Days, Carrier Mode Delay | ✅ Completed |
 | **16** | [Warehouse Inventory Health & Stock-Out Analytics](./Day16%20-%20Warehouse-Inventory-Stockout-Risk-Replenishment/) | Supply Chain & Operations | Stock on Hand, Capacity Util %, Reorder Point (ROP), Stock-Out Risk %, Supplier Lead Time | ✅ Completed |
 | **17** | [Retail Demand Forecasting & Promotional Analytics](./Day17%20-%20Retail-Demand-Forecasting-Promotional-Lift/) | Supply Chain & Merchandising | Demand Volume, Realized Revenue, Promotional Lift %, Customer Segments, Seasonality Drivers | ✅ Completed |
-| **18–30** | *Upcoming Industry Dashboards* | *HR, Finance, Healthcare, SCM* | Advanced DAX, Optimization, Visual Storytelling | ⏳ Planned |
+| **18** | [Retail Pricing Optimization & Price Elasticity](./Day18%20-%20Retail-Pricing-Optimization-Price-Elasticity/) | Supply Chain & Merchandising | Net Revenue, Gross Revenue, Discount Drag %, PED Elasticity, Competitor Benchmarking | ✅ Completed |
+| **19–30** | *Upcoming Industry Dashboards* | *HR, Finance, Healthcare, SCM* | Advanced DAX, Optimization, Visual Storytelling | ⏳ Planned |
 
 ---
 
