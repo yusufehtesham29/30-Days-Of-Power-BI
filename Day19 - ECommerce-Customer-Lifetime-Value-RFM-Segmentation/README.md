@@ -1,194 +1,176 @@
-\# 🛍️ Day 19: E-Commerce Customer Lifetime Value (CLV), RFM Segmentation \& Cohort Velocity
+<div align="center">
 
+# 🛍️ Day 19: E-Commerce Customer Lifetime Value (CLV) & RFM Segmentation Command
 
+**Enterprise-Grade Behavioral Analytics, Star Schema Architecture & Cohort Retention Modeling**
 
-!\[Dashboard Preview](dashboard\_preview.png)
+[![Power BI](https://img.shields.io/badge/Power_BI-Desktop-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
+[![DAX](https://img.shields.io/badge/DAX-Advanced_Modeling-0078D4?style=for-the-badge&logo=microsoftexcel&logoColor=white)](https://learn.microsoft.com/en-us/dax/)
+[![Data Model](https://img.shields.io/badge/Schema-Star_Schema-10B981?style=for-the-badge)](https://en.wikipedia.org/wiki/Star_schema)
+[![Kaggle Dataset](https://img.shields.io/badge/Dataset-Online_Retail_II-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci)
 
+<br/>
 
+![Dashboard Preview](dashboard_preview.png)
 
-\## 📌 Executive Overview
+</div>
 
-This multi-dimensional commercial retail command center evaluates customer acquisition health, order velocity, and customer lifetime value (CLV) across \*\*805,549 verified transactions\*\* and \*\*36,969 purchase orders\*\* generating \*\*$17.74M in gross sales revenue\*\* across 41 global markets. It implements an enterprise \*\*Recency, Frequency, Monetary (RFM)\*\* behavioral segmentation model, isolating high-yield customer cohorts and flagging \*\*$1.65M in at-risk revenue exposure\*\*.
+---
 
+## 📌 Executive Summary
 
+This enterprise e-commerce command center bridges raw transaction logs with multi-dimensional customer behavioral economics. Analyzing **805,549 audited transactions** across **41 global markets**, the model isolates high-value customer cohorts using an enterprise **Recency, Frequency, and Monetary (RFM)** framework to reveal portfolio vulnerabilities, lifetime customer value, and at-risk revenue exposure.
 
-\---
+> [!IMPORTANT]
+> **Key Strategic Finding:** While the business captured **$17.74M in gross revenue**, a targeted cohort of **921 Champions (15.7% of customers)** accounts for **$11.37M (64.1%) of total sales**, exposing the enterprise to severe revenue concentration risk if retention slips.
 
+---
 
+## 📊 Core Commercial & Customer Economics
 
-\## 🔑 Core Commercial \& RFM KPIs
+| Strategic Metric | Baseline Value | Operational Definition & Impact |
+| :--- | :---: | :--- |
+| **Gross Sales Revenue** | **`$17.74M`** | Realized cumulative sales turnover post-data hygiene. |
+| **Total Dispatched Orders** | **`36,969`** | Unique verified invoice transactions across 41 countries. |
+| **Active Customer Base** | **`5,878`** | Registered B2B & wholesale customer accounts. |
+| **Average Order Value (AOV)** | **`$479.95`** | Mean transaction basket value across catalog items. |
+| **Average Customer Spend** | **`$3,018.62`** | Mean lifetime value (LTV) generated per active client. |
+| **Champions Revenue Share** | **`64.1%`** | Share of revenue driven by the top 921 VIP accounts. |
+| **At-Risk Capital Exposure** | **`$1.65M`** | Lapsed spend from 742 previously active repeat buyers. |
+| **Primary Geographic Hub** | **`83.0% (UK)`** | Domestic home market turnover totaling **$14.72M**. |
 
-\* \*\*Total Sales Revenue:\*\* $17.74M ($17,743,429.18)
+---
 
-\* \*\*Total Dispatched Orders:\*\* 36,969 Purchase Invoices
+## 🧱 Data Architecture & Star Schema Model
 
-\* \*\*Total Active Customer Profiles:\*\* 5,878 Accounts
-
-\* \*\*Average Order Value (AOV):\*\* $479.95
-
-\* \*\*Average Spend per Customer:\*\* $3,018.62
-
-\* \*\*Champions Revenue Contribution:\*\* 64.1% ($11.37M across 921 top-tier clients)
-
-\* \*\*At-Risk Revenue Exposure:\*\* $1.65M (742 lapsed repeat buyers)
-
-\* \*\*Primary Geographic Market:\*\* United Kingdom ($14.72M | 83.0% share)
-
-
-
-\---
-
-
-
-\## 📥 Data Source \& Reproduction Instructions
-
-Due to GitHub file size limits (>25 MB web / >100 MB Git), the raw 94 MB dataset is hosted externally.
-
-
-
-\* \*\*Primary Source:\*\* \[Kaggle - Online Retail II UCI Dataset](https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci)
-
-\* \*\*File Used:\*\* `online\_retail\_II.csv` (1,067,371 rows × 8 features)
-
-
-
-\### Local Reproduction Steps:
-
-1\. Download `online\_retail\_II.csv` from the Kaggle link above.
-
-2\. Place the file inside the project directory.
-
-3\. Open `Customer\_Lifetime\_Value\_RFM\_Command.pbix` in \*\*Power BI Desktop\*\*.
-
-4\. If prompted, go to \*\*Transform Data > Data source settings > Change Source\*\* and point to your local file path.
-
-
-
-\---
-
-
-
-\## 🛠️ Data Architecture \& Star Schema Model
-
-The model structures a high-performance \*\*Star Schema\*\* separating raw transactional logs from analytical dimensions:
-
-
+The report abandons flat-table performance bottlenecks in favor of a normalized **Star Schema** built with DAX dimension tables:
 
 ```
-
-&#x20;      ┌────────────────────────┐
-
-&#x20;      │        DimDate         │
-
-&#x20;      │  (DAX Generated Table) │
-
-&#x20;      └───────────┬────────────┘
-
-&#x20;                  │ 1
-
-&#x20;                  │ \*
-
-┌──────────────────┴──────────────────┐          ┌────────────────────────┐
-
-│              FactSales              │ \*      1 │      DimCustomer       │
-
-│         (805,549 Records)           ├──────────┤  (DAX Customer Matrix) │
-
-└─────────────────────────────────────┘          └────────────────────────┘
-
+                  ┌───────────────────────────────┐
+                  │            DimDate            │
+                  │   (Continuous Date Matrix)    │
+                  └───────────────┬───────────────┘
+                                  │ 1
+                                  │ *
+┌─────────────────────────────────┴─────────────────────────────────┐
+│                             FactSales                             │
+│                  (805,549 Audited Order Records)                  │
+└─────────────────────────────────┬─────────────────────────────────┘
+                                  │ *
+                                  │ 1
+                  ┌───────────────┴───────────────┐
+                  │          DimCustomer          │
+                  │   (Dynamic RFM Segmentation)  │
+                  └───────────────────────────────┘
 ```
 
+### ⚙️ Power Query ETL Pipeline
+* **Guest Checkout Isolation:** Pruned **243,007 rows** with null `Customer ID` to enable account-level behavioral tracking.
+* **Accounting Adjustments & Return Filtering:** Filtered out negative quantities (`Quantity <= 0`), adjustments (`Price <= 0`), and cancellations (`Invoice` starting with `C`).
+* **Relational Integrity Normalization:** Standardized `InvoiceDate` from timestamp (`YYYY-MM-DD HH:MM:SS`) to discrete calendar Date (`YYYY-MM-DD`) to ensure a direct `1 : *` relationship with `DimDate`.
 
+---
 
-\* \*\*Data Hygiene in Power Query:\*\*
+## 📐 Enterprise DAX Formulations
 
-&#x20; \* Pruned 243,007 guest checkout records with null `Customer ID` to maintain individual-level tracking.
-
-&#x20; \* Filtered out credit note cancellations (`Invoice` starting with "C") and negative return adjustments (`Quantity` $\\le$ 0, `Price` $\\le$ 0).
-
-&#x20; \* Standardized `InvoiceDate` to discrete Date format to ensure clean 1:\* relational integrity with `DimDate`.
-
-
-
-\---
-
-
-
-\## 📐 Core Analytical DAX Formulations
-
-
-
-\### 1. RFM Behavioral Segmentation (DAX Dimension Table)
-
+### 1. Dynamic Customer RFM Segmentation Table
 ```dax
-
-CustomerSegment = 
-
-SWITCH(
-
-&#x20;   TRUE(),
-
-&#x20;   DATEDIFF(\[LastPurchaseDate], DATE(2011, 12, 10), DAY) <= 60 \&\& \[TotalOrders] >= 6 \&\& \[TotalSpend] >= 2500, "Champions",
-
-&#x20;   DATEDIFF(\[LastPurchaseDate], DATE(2011, 12, 10), DAY) <= 120 \&\& \[TotalOrders] >= 3, "Loyal Customers",
-
-&#x20;   DATEDIFF(\[LastPurchaseDate], DATE(2011, 12, 10), DAY) <= 60 \&\& \[TotalOrders] < 3, "New \& Promising",
-
-&#x20;   DATEDIFF(\[LastPurchaseDate], DATE(2011, 12, 10), DAY) > 180 \&\& \[TotalOrders] >= 3, "At Risk",
-
-&#x20;   DATEDIFF(\[LastPurchaseDate], DATE(2011, 12, 10), DAY) > 180 \&\& \[TotalOrders] < 3, "Hibernating / Lost",
-
-&#x20;   "Needs Attention"
-
-)
-
+DimCustomer = 
+VAR SnapshotDate = DATE(2011, 12, 10)
+VAR CustomerBase = 
+    SUMMARIZE(
+        FactSales,
+        FactSales[Customer ID],
+        "LastPurchaseDate", MAX(FactSales[InvoiceDate]),
+        "TotalOrders", DISTINCTCOUNT(FactSales[Invoice]),
+        "TotalSpend", SUM(FactSales[SalesAmount]),
+        "Country", MAX(FactSales[Country])
+    )
+RETURN
+    ADDCOLUMNS(
+        CustomerBase,
+        "RecencyDays", DATEDIFF([LastPurchaseDate], SnapshotDate, DAY),
+        "CustomerSegment", 
+            SWITCH(
+                TRUE(),
+                -- Champions: High frequency, substantial spend, recent purchase
+                DATEDIFF([LastPurchaseDate], SnapshotDate, DAY) <= 60 && [TotalOrders] >= 6 && [TotalSpend] >= 2500, "Champions",
+                -- Loyal Customers: Consistent repeat orders, active within 4 months
+                DATEDIFF([LastPurchaseDate], SnapshotDate, DAY) <= 120 && [TotalOrders] >= 3, "Loyal Customers",
+                -- New & Promising: Recent buyers with initial traction
+                DATEDIFF([LastPurchaseDate], SnapshotDate, DAY) <= 60 && [TotalOrders] < 3, "New & Promising",
+                -- At Risk: Significant historical buyers dormant for >6 months
+                DATEDIFF([LastPurchaseDate], SnapshotDate, DAY) > 180 && [TotalOrders] >= 3, "At Risk",
+                -- Hibernating / Lost: Lapsed low-frequency accounts
+                DATEDIFF([LastPurchaseDate], SnapshotDate, DAY) > 180 && [TotalOrders] < 3, "Hibernating / Lost",
+                -- Mid-tier balance
+                "Needs Attention"
+            )
+    )
 ```
 
-
-
-\### 2. Champions Revenue Dominance Share %
-
+### 2. Champions Revenue Share %
 ```dax
-
 Champions Revenue Share % = 
-
 DIVIDE(
-
-&#x20;   CALCULATE(\[Total Sales Revenue], DimCustomer\[CustomerSegment] = "Champions"),
-
-&#x20;   CALCULATE(\[Total Sales Revenue], ALL(DimCustomer\[CustomerSegment])),
-
-&#x20;   0
-
+    CALCULATE([Total Sales Revenue], DimCustomer[CustomerSegment] = "Champions"),
+    CALCULATE([Total Sales Revenue], ALL(DimCustomer[CustomerSegment])),
+    0
 )
-
 ```
 
+### 3. Average Order Value (AOV)
+```dax
+Average Order Value = 
+DIVIDE(
+    SUM(FactSales[SalesAmount]), 
+    DISTINCTCOUNT(FactSales[Invoice]), 
+    0
+)
+```
 
+---
 
-\---
+## 🎯 Behavioral RFM Cohort Matrix
 
+| Customer Segment | Active Accounts | Avg Recency | Avg Orders | Realized Spend | Avg Spend / Client | Strategic Action Plan |
+| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
+| 🟢 **Champions** | **921** | 19.1 Days | 21.2 | **$11.37M** | $12,347.79 | Dedicated VIP success management & early catalog access. |
+| 🔵 **Loyal Customers** | **1,423** | 44.8 Days | 5.9 | **$2.79M** | $1,964.28 | Upsell loyalty bundles & volume-tier rebate incentives. |
+| 🔴 **At Risk** | **742** | 353.4 Days | 5.5 | **$1.65M** | $2,226.82 | **Priority Win-Back:** Automated personalized outreach campaigns. |
+| 🟡 **Needs Attention** | **624** | 121.8 Days | 3.3 | **$0.75M** | $1,207.09 | Mid-tier nurturing workflows to prevent churn slippage. |
+| ⚪ **Hibernating / Lost** | **1,659** | 453.7 Days | 1.3 | **$0.74M** | $447.74 | Low-cost programmatic email re-engagement or deprioritization. |
+| 🟣 **New & Promising** | **509** | 28.2 Days | 1.5 | **$0.43M** | $840.14 | Onboarding nurture sequence to secure second purchase. |
 
+---
 
-\## 💡 Strategic Executive Insights
+## 💡 Strategic Executive Insights
 
-1\. \*\*The 64% Champions Concentration:\*\* 15.7% of the customer base (921 accounts) generates \*\*$11.37M\*\* of total revenue. Maintaining service levels and VIP incentives for this core cohort is critical to top-line stability.
+1. **The 64% Concentration Dilemma:** Over **$11.37M** in revenue depends on just **921 accounts**. A structured account-retention framework is critical—losing 50 of these buyers would impact EBITDA more than losing 1,000 one-time shoppers.
+2. **Immediate $1.65M Reactivation Runway:** The **742 At-Risk accounts** averaged 5.5 orders and spent over $2,200 each before going dormant. Re-engaging these known buyers offers a significantly lower customer acquisition cost (CAC) than net-new acquisition.
+3. **Cross-Border Expansion Vectors:** While domestic UK accounts for 83% of turnover, established footholds in Ireland ($621K), the Netherlands ($554K), Germany ($431K), and France ($355K) provide proven expansion markets for localized fulfillment.
 
-2\. \*\*Reactivation Opportunity ($1.65M):\*\* 742 repeat accounts with proven purchasing history have not transacted in over 350 days. Targeting this cohort with automated win-back workflows represents a high-ROI retention initiative.
+---
 
-3\. \*\*Cross-Border Growth Potential:\*\* While domestic UK sales dominate ($14.72M), Western European markets (EIRE at $622K, Netherlands at $554K, Germany at $431K) show consistent repeat order patterns that can be scaled with localized operations.
+## 📥 Dataset Source & Setup Guide
 
+Due to GitHub's file storage limits (>25 MB browser / >100 MB Git), the raw 94.8 MB CSV file is hosted externally:
 
+* **Source:** [Kaggle - Online Retail II UCI Dataset](https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci)
+* **File:** `online_retail_II.csv` (1,067,371 rows × 8 columns)
 
-\---
+### Reproduction Steps:
+1. Download `online_retail_II.csv` from Kaggle.
+2. Place it in your local project folder.
+3. Open `Customer_Lifetime_Value_RFM_Command.pbix` in **Power BI Desktop**.
+4. If a file-path prompt appears: Navigate to **Transform Data > Data source settings > Change Source** and select your local file path.
 
+---
 
+<div align="center">
 
-\## 📂 Repository Contents
+Developed as part of the **30-Day Enterprise Power BI Portfolio Challenge**.
 
-\* `Customer\_Lifetime\_Value\_RFM\_Command.pbix` — Interactive Power BI application.
+[Back to Master Repository](https://github.com/yusufehtesham29/30-Days-Of-Power-BI)
 
-\* `dashboard\_preview.png` — High-resolution executive dashboard screenshot.
-
-\* `README.md` — Project documentation and methodology guide.
-
+</div>
