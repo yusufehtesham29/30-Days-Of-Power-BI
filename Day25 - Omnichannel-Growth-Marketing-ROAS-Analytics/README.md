@@ -7,7 +7,7 @@
 [![Power BI](https://img.shields.io/badge/Power_BI-Desktop-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
 [![DAX](https://img.shields.io/badge/DAX-Marketing_Analytics-0078D4?style=for-the-badge&logo=microsoftexcel&logoColor=white)](https://learn.microsoft.com/en-us/dax/)
 [![Domain](https://img.shields.io/badge/Domain-Growth_&_Paid_Media-0D9488?style=for-the-badge)](https://en.wikipedia.org/wiki/Digital_marketing)
-[![Dataset](https://img.shields.io/badge/Dataset-Marketing_Campaign_Performance-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/)
+[![Dataset](https://img.shields.io/badge/Dataset-Marketing_Campaign_Performance-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/datasets/manishabhatt22/marketing-campaign-performance-dataset)
 
 <br/>
 
@@ -23,16 +23,18 @@
 Day25 - Omnichannel-Growth-Marketing-ROAS-Analytics/
 │
 ├── 📊 Omnichannel_Growth_Marketing_ROAS.pbix  # Production Power BI Application & Data Model
-├── 📄 marketing_campaign_dataset.csv          # Raw Campaign Records (200,000 campaigns × 16 features)
 ├── 🖼️ dashboard_preview.png                  # High-Resolution Executive Dashboard Screenshot
 └── 📝 README.md                              # Full Project Architecture, DAX Formulas & Growth Playbook
 ```
+
+> [!NOTE]
+> **External Data Source Notice:** Due to GitHub's file size guidelines for raw tabular data, `marketing_campaign_dataset.csv` (~26 MB) is hosted externally on Kaggle and excluded from direct Git tracking via `.gitignore`. You can download the source file directly from the [Kaggle Dataset Page](https://www.kaggle.com/datasets/manishabhatt22/marketing-campaign-performance-dataset).
 
 ### File Details & Data Footprint
 | File Name | File Type | File Size | Description |
 | :--- | :---: | :---: | :--- |
 | **`Omnichannel_Growth_Marketing_ROAS.pbix`** | Power BI Report | ~3.8 MB | Interactive marketing analytics application, DAX efficiency suite, and channel attribution matrix. |
-| **`marketing_campaign_dataset.csv`** | CSV Data Source | 26.0 MB | 200,000 enterprise campaign records executed across 5 brands and 6 acquisition channels in 2021. |
+| **`marketing_campaign_dataset.csv`** | CSV Data Source | 26.0 MB | 200,000 enterprise campaign records executed across 5 brands and 6 acquisition channels in 2021 (Hosted on Kaggle). |
 | **`dashboard_preview.png`** | Image (PNG) | ~1.1 MB | High-resolution canvas view used for documentation and portfolio showcases. |
 | **`README.md`** | Markdown Document | ~14 KB | Comprehensive growth marketing problem statement, unit economics benchmarks, DAX formulas, and reproduction steps. |
 
@@ -213,8 +215,8 @@ DIVIDE([Total Ad Spend], [Total Conversions], 0)
 
 ## 📥 Dataset Source & Setup Guide
 
-* **Source:** Kaggle - Marketing Campaign Performance Dataset
-* **File Used:** `marketing_campaign_dataset.csv` (200,000 rows × 16 columns)
+* **Source:** [Kaggle - Marketing Campaign Performance Dataset](https://www.kaggle.com/datasets/manishabhatt22/marketing-campaign-performance-dataset) by Manisha Bhatt
+* **File Used:** `marketing_campaign_dataset.csv` (200,000 rows × 16 columns, ~26 MB)
 
 ### Reproduction Steps:
 1. Clone or download this project repository:
@@ -222,7 +224,7 @@ DIVIDE([Total Ad Spend], [Total Conversions], 0)
    git clone [https://github.com/yusufehtesham29/30-Days-Of-Power-BI.git](https://github.com/yusufehtesham29/30-Days-Of-Power-BI.git)
    cd "Day25 - Omnichannel-Growth-Marketing-ROAS-Analytics"
    ```
-2. Verify that `marketing_campaign_dataset.csv` is present in the folder.
+2. Download the source dataset directly from [Kaggle](https://www.kaggle.com/datasets/manishabhatt22/marketing-campaign-performance-dataset) and extract `marketing_campaign_dataset.csv` into this directory.
 3. Open `Omnichannel_Growth_Marketing_ROAS.pbix` in **Power BI Desktop**.
 4. If prompted to reconnect the data source:
    * Go to **Home > Transform Data > Data source settings**.
